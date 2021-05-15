@@ -101,7 +101,7 @@ extension ARReferenceObject {
 }
 #endif
 
-internal final class XCTColorAsset {
+final class XCTColorAsset {
   internal fileprivate(set) var name: String
 
   #if os(macOS)
