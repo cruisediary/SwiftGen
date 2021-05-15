@@ -64,7 +64,7 @@ enum CustomFamily {
 
 // MARK: - Implementation Details
 
-internal struct MyFontConvertible {
+struct MyFontConvertible {
   internal let name: String
   internal let family: String
   internal let path: String

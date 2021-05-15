@@ -135,7 +135,7 @@ enum Asset {
 
 // MARK: - Implementation Details
 
-internal struct ARResourceGroupAsset {
+struct ARResourceGroupAsset {
   internal fileprivate(set) var name: String
 
   #if os(iOS)
@@ -205,7 +205,7 @@ extension ColorAsset.Color {
   }
 }
 
-internal struct DataAsset {
+struct DataAsset {
   internal fileprivate(set) var name: String
 
   #if os(iOS) || os(tvOS) || os(macOS)
@@ -233,7 +233,7 @@ extension NSDataAsset {
 }
 #endif
 
-internal struct ImageAsset {
+struct ImageAsset {
   internal fileprivate(set) var name: String
 
   #if os(macOS)
