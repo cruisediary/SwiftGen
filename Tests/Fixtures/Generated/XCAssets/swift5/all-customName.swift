@@ -12,9 +12,9 @@
 
 // Deprecated typealiases
 @available(*, deprecated, renamed: "XCTColorAsset.Color", message: "This typealias will be removed in SwiftGen 7.0")
-internal typealias XCTColor = XCTColorAsset.Color
+typealias XCTColor = XCTColorAsset.Color
 @available(*, deprecated, renamed: "XCTImageAsset.Image", message: "This typealias will be removed in SwiftGen 7.0")
-internal typealias XCTImage = XCTImageAsset.Image
+typealias XCTImage = XCTImageAsset.Image
 
 // swiftlint:disable superfluous_disable_command file_length implicit_return
 
@@ -105,9 +105,9 @@ internal final class XCTColorAsset {
   internal fileprivate(set) var name: String
 
   #if os(macOS)
-  internal typealias Color = NSColor
+  typealias Color = NSColor
   #elseif os(iOS) || os(tvOS) || os(watchOS)
-  internal typealias Color = UIColor
+  typealias Color = UIColor
   #endif
 
   @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, *)
@@ -169,9 +169,9 @@ internal struct XCTImageAsset {
   internal fileprivate(set) var name: String
 
   #if os(macOS)
-  internal typealias Image = NSImage
+  typealias Image = NSImage
   #elseif os(iOS) || os(tvOS) || os(watchOS)
-  internal typealias Image = UIImage
+  typealias Image = UIImage
   #endif
 
   var image: Image {
