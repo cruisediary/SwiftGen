@@ -70,7 +70,7 @@ enum Asset {
 // MARK: - Implementation Details
 
 struct ARResourceGroupAsset {
-  internal fileprivate(set) var name: String
+  fileprivate(set) var name: String
 
   #if os(iOS)
   @available(iOS 11.3, *)
@@ -104,7 +104,7 @@ extension ARReferenceObject {
 #endif
 
 final class ColorAsset {
-  internal fileprivate(set) var name: String
+  fileprivate(set) var name: String
 
   #if os(macOS)
   typealias Color = NSColor
@@ -140,7 +140,7 @@ extension ColorAsset.Color {
 }
 
 struct DataAsset {
-  internal fileprivate(set) var name: String
+  fileprivate(set) var name: String
 
   #if os(iOS) || os(tvOS) || os(macOS)
   @available(iOS 9.0, macOS 10.11, *)
@@ -168,7 +168,7 @@ extension NSDataAsset {
 #endif
 
 struct ImageAsset {
-  internal fileprivate(set) var name: String
+  fileprivate(set) var name: String
 
   #if os(macOS)
   typealias Image = NSImage

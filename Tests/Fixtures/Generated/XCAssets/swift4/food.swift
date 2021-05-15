@@ -38,7 +38,7 @@ enum Asset {
 // MARK: - Implementation Details
 
 struct ImageAsset {
-  internal fileprivate(set) var name: String
+  fileprivate(set) var name: String
 
   #if os(macOS)
   typealias Image = NSImage
