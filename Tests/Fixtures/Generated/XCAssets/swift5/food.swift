@@ -63,7 +63,7 @@ internal struct ImageAsset {
   }
 }
 
-internal extension ImageAsset.Image {
+extension ImageAsset.Image {
   @available(macOS, deprecated,
     message: "This initializer is unsafe on macOS, please use the ImageAsset.image property")
   convenience init?(asset: ImageAsset) {

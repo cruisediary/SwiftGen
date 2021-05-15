@@ -85,7 +85,7 @@ internal struct XCTARResourceGroup {
 
 #if os(iOS)
 @available(iOS 11.3, *)
-internal extension ARReferenceImage {
+extension ARReferenceImage {
   static func referenceImages(in asset: XCTARResourceGroup) -> Set<ARReferenceImage> {
     let bundle = BundleToken.bundle
     return referenceImages(inGroupNamed: asset.name, bundle: bundle) ?? Set()
@@ -93,7 +93,7 @@ internal extension ARReferenceImage {
 }
 
 @available(iOS 12.0, *)
-internal extension ARReferenceObject {
+extension ARReferenceObject {
   static func referenceObjects(in asset: XCTARResourceGroup) -> Set<ARReferenceObject> {
     let bundle = BundleToken.bundle
     return referenceObjects(inGroupNamed: asset.name, bundle: bundle) ?? Set()
@@ -123,7 +123,7 @@ internal final class XCTColorAsset {
   }
 }
 
-internal extension XCTColorAsset.Color {
+extension XCTColorAsset.Color {
   @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, *)
   convenience init?(asset: XCTColorAsset) {
     let bundle = BundleToken.bundle
@@ -153,7 +153,7 @@ internal struct XCTDataAsset {
 
 #if os(iOS) || os(tvOS) || os(macOS)
 @available(iOS 9.0, macOS 10.11, *)
-internal extension NSDataAsset {
+extension NSDataAsset {
   convenience init?(asset: XCTDataAsset) {
     let bundle = BundleToken.bundle
     #if os(iOS) || os(tvOS)
@@ -191,7 +191,7 @@ internal struct XCTImageAsset {
   }
 }
 
-internal extension XCTImageAsset.Image {
+extension XCTImageAsset.Image {
   @available(macOS, deprecated,
     message: "This initializer is unsafe on macOS, please use the XCTImageAsset.image property")
   convenience init?(asset: XCTImageAsset) {
