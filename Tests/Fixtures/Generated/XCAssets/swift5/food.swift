@@ -46,7 +46,7 @@ internal struct ImageAsset {
   internal typealias Image = UIImage
   #endif
 
-  internal var image: Image {
+  var image: Image {
     let bundle = BundleToken.bundle
     #if os(iOS) || os(tvOS)
     let image = Image(named: name, in: bundle, compatibleWith: nil)

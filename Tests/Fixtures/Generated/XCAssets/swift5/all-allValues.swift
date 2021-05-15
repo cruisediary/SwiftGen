@@ -140,12 +140,12 @@ internal struct ARResourceGroupAsset {
 
   #if os(iOS)
   @available(iOS 11.3, *)
-  internal var referenceImages: Set<ARReferenceImage> {
+  var referenceImages: Set<ARReferenceImage> {
     return ARReferenceImage.referenceImages(in: self)
   }
 
   @available(iOS 12.0, *)
-  internal var referenceObjects: Set<ARReferenceObject> {
+  var referenceObjects: Set<ARReferenceObject> {
     return ARReferenceObject.referenceObjects(in: self)
   }
   #endif
@@ -210,7 +210,7 @@ internal struct DataAsset {
 
   #if os(iOS) || os(tvOS) || os(macOS)
   @available(iOS 9.0, macOS 10.11, *)
-  internal var data: NSDataAsset {
+  var data: NSDataAsset {
     guard let data = NSDataAsset(asset: self) else {
       fatalError("Unable to load data asset named \(name).")
     }
@@ -242,7 +242,7 @@ internal struct ImageAsset {
   internal typealias Image = UIImage
   #endif
 
-  internal var image: Image {
+  var image: Image {
     let bundle = BundleToken.bundle
     #if os(iOS) || os(tvOS)
     let image = Image(named: name, in: bundle, compatibleWith: nil)
