@@ -65,9 +65,9 @@ enum CustomFamily {
 // MARK: - Implementation Details
 
 struct MyFontConvertible {
-  internal let name: String
-  internal let family: String
-  internal let path: String
+  let name: String
+  let family: String
+  let path: String
 
   #if os(OSX)
   typealias Font = NSFont
